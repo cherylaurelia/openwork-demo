@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+/* Palette and type from openworklabs.com (--lp-* variables, Inter + JetBrains Mono). */
+:root {
+  --page: #fcfdfe;
+  --ink: #011627;
+  --body: #4b5563;
+  --muted: #5e6877;
+  --tonal: #f0f4f9;
+  --border: #e5e7eb;
+  --terminal: #0b1e30;
+  --blue: #2563eb;
+  --status: #059669;
+  --miss: #b42318;
+}
+
+@theme inline {
+  --color-page: var(--page);
+  --color-ink: var(--ink);
+  --color-body: var(--body);
+  --color-muted: var(--muted);
+  --color-tonal: var(--tonal);
+  --color-border: var(--border);
+  --color-terminal: var(--terminal);
+  --color-blue: var(--blue);
+  --color-status: var(--status);
+  --color-miss: var(--miss);
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains), ui-monospace, monospace;
+}
+
+body {
+  background: var(--page);
+  color: var(--ink);
+  font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  a {
+    color: var(--blue);
+    text-underline-offset: 3px;
+  }
+}

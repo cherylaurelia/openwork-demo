@@ -1,0 +1,106 @@
+[
+ {
+  "name": "bug-triage",
+  "description": "Triage a new bug report: severity, owner, and a reproducible summary. Use when someone pastes a bug report or asks to triage an issue."
+ },
+ {
+  "name": "customer-call-notes",
+  "description": "Turn raw customer call notes into a structured summary with pains, requests, and follow-ups. Use after any customer or sales call."
+ },
+ {
+  "name": "incident-postmortem",
+  "description": "Write a blameless incident postmortem with timeline, impact, root cause, and action items. Use after an outage or incident."
+ },
+ {
+  "name": "onboarding-checklist",
+  "description": "Build a first-week onboarding checklist for a new hire by role. Use when someone new joins the team."
+ },
+ {
+  "name": "meeting-agenda",
+  "description": "Draft a meeting agenda with goals, topics, owners, and timeboxes. Use before any recurring or ad hoc meeting."
+ },
+ {
+  "name": "okr-draft",
+  "description": "Draft quarterly OKRs with measurable key results. Use when planning a quarter or reviewing goals."
+ },
+ {
+  "name": "hiring-scorecard",
+  "description": "Write an interview scorecard for a role with competencies and rating anchors. Use when opening a role or preparing interviews."
+ },
+ {
+  "name": "candidate-debrief",
+  "description": "Summarize interview feedback into a hire or no-hire recommendation. Use after an interview loop."
+ },
+ {
+  "name": "sales-followup-email",
+  "description": "Draft a follow-up email after a sales call with next steps. Use after a prospect call."
+ },
+ {
+  "name": "pricing-faq",
+  "description": "Answer pricing questions with the approved plan details and limits. Use when a customer asks about pricing or plans."
+ },
+ {
+  "name": "support-macro",
+  "description": "Write a support reply in the team's tone with troubleshooting steps. Use when answering a customer support ticket."
+ },
+ {
+  "name": "product-spec",
+  "description": "Write a one-page product spec with problem, users, scope, and success metrics. Use when proposing a new feature."
+ },
+ {
+  "name": "design-review",
+  "description": "Run a structured design review covering usability, accessibility, and consistency. Use when reviewing a mockup or UI."
+ },
+ {
+  "name": "code-review-checklist",
+  "description": "Review a pull request for correctness, tests, security, and readability. Use when asked to review code."
+ },
+ {
+  "name": "security-questionnaire",
+  "description": "Fill in a customer security questionnaire from approved answers. Use when a customer sends a security review."
+ },
+ {
+  "name": "investor-update",
+  "description": "Write the monthly investor update with metrics, wins, asks. Use at the end of each month for investors."
+ },
+ {
+  "name": "board-deck-outline",
+  "description": "Outline a board meeting deck. Use when preparing for a board meeting."
+ },
+ {
+  "name": "competitor-brief",
+  "description": "Summarize a competitor's product, pricing, and positioning. Use when someone asks about a competitor."
+ },
+ {
+  "name": "blog-post-draft",
+  "description": "Draft a company blog post in the house style. Use when writing a blog post or announcement."
+ },
+ {
+  "name": "social-post",
+  "description": "Write a short social post announcing a launch. Use when announcing something on X or LinkedIn."
+ },
+ {
+  "name": "retro-facilitation",
+  "description": "Run a sprint retrospective: what went well, what didn't, actions. Use at the end of a sprint."
+ },
+ {
+  "name": "sprint-planning",
+  "description": "Plan a sprint from the backlog with capacity and goals. Use at the start of a sprint."
+ },
+ {
+  "name": "data-request",
+  "description": "Answer an internal data request with the right query and caveats. Use when someone asks for a metric or number."
+ },
+ {
+  "name": "contract-summary",
+  "description": "Summarize a contract's key terms, renewal dates, and risks. Use when reviewing a contract."
+ },
+ {
+  "name": "user-interview-guide",
+  "description": "Write a user interview guide with open questions. Use before user research sessions."
+ },
+ {
+  "name": "travel-plan",
+  "description": "Plan a team offsite or business trip itinerary. Use when someone is organizing travel."
+ }
+]

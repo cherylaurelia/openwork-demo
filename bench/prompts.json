@@ -1,0 +1,68 @@
+[
+  {
+    "id": "weekly-1",
+    "skill": "weekly-update",
+    "marker": "WEEKLY UPDATE ·",
+    "text": "Write this week's team update. We shipped the login page redesign and fixed the CSV export bug. Still working on the billing migration. SSO has been blocked on the vendor for 9 days."
+  },
+  {
+    "id": "weekly-2",
+    "skill": "weekly-update",
+    "marker": "WEEKLY UPDATE ·",
+    "text": "Can you put together our end-of-week summary for the team? Done: Android beta went out, onboarding emails rewritten. Ongoing: search relevance tuning. Stuck: waiting on legal review of the new terms since last Monday."
+  },
+  {
+    "id": "release",
+    "skill": "release-notes",
+    "marker": "RELEASE NOTES ·",
+    "text": "Draft the release notes for v2.4. New: dark mode, CSV import. Fixed: crash when renaming a folder, slow search on large workspaces."
+  },
+  {
+    "id": "vendor",
+    "skill": "vendor-evaluation",
+    "marker": "VENDOR EVALUATION ·",
+    "text": "We need to pick an error-tracking tool. Compare Sentry, Rollbar and Bugsnag for a 10-person team and tell me which to choose."
+  },
+  {
+    "id": "translation",
+    "skill": "translation-review",
+    "marker": "TRANSLATION REVIEW ·",
+    "text": "Check this French copy for our signup page: 'Start your free trial' is 'Commencez votre essai gratuit' and 'No credit card needed' is 'Pas de carte de crédit nécessaire'."
+  },
+  {
+    "id": "expense",
+    "skill": "expense-report",
+    "marker": "EXPENSE REPORT ·",
+    "text": "Put together my expense report for the Toronto trip: Nov 2 train $84.50, Nov 2 hotel $212.00, Nov 3 client dinner $96.40, Nov 3 taxi $23.10."
+  },
+  {
+    "id": "none-tcp",
+    "skill": null,
+    "text": "Explain the difference between TCP and UDP in two sentences."
+  },
+  {
+    "id": "none-haiku",
+    "skill": null,
+    "text": "Write a short haiku about autumn leaves."
+  },
+  {
+    "id": "none-regex",
+    "skill": null,
+    "text": "Give me a regex that matches a US ZIP code, with or without the +4 part."
+  },
+  {
+    "id": "none-email",
+    "skill": null,
+    "text": "Rewrite this to sound friendlier: 'Your request has been denied due to policy.'"
+  },
+  {
+    "id": "none-math",
+    "skill": null,
+    "text": "What is 15% of 240?"
+  },
+  {
+    "id": "none-summary",
+    "skill": null,
+    "text": "Summarize in one sentence why the sky looks blue."
+  }
+]

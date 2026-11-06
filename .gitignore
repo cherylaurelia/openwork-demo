@@ -1,0 +1,7 @@
+node_modules/
+.next/
+bench/ws-*.json
+bench/fixtures/*.secret
+.vercel
+*.tsbuildinfo
+next-env.d.ts

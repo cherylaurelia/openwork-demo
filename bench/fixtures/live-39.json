@@ -1,0 +1,313 @@
+{
+ "capturedAt": "2026-11-05",
+ "note": "initialize instructions and list_skills from the 39-skill bench workspace, live api.openworklabs.com",
+ "instructions": "Read openwork://agent/guidance.md with resources/read before working; it contains the full connection, remote-session, import, and Workflow rules.\nSearch capabilities with 2-4 keyword variants; execute only exact returned names. Copy external argumentsSchema into body and schemaDigest into schemaDigest. Schema guidance is advisory; never repeat a successful provider call because of it.\nOnly use intent connect for an explicit connect/reconnect request. Discovery must not trigger sign-in. Relay the connection's exact action; a downstream failure does not mean OpenWork needs reconnecting. Never invent credentials or claim setup is ready.\nUse list_skills/get_skill for authorized skills and follow the matching skill before creating or sharing one. update_skill publishes an immutable version.\nFor Apps and artifacts read build-an-app with get_skill, then use prepare_app/create_app/read_app/update_app; never substitute local HTML or legacy views. Open Apps via their discovered capability.\nHonor requests to work remotely by delegating the whole request with remote-session:create/send, then reading its receipt; do not perform that work here. Only schedule an Automation when asked.\nTo follow remote sessions, call remote-session:status with all of their commandIds or Cloud sessionIds and waitMs instead of calling remote-session:read repeatedly; read only for the transcript or the full answer.\nTo notify the user or \"send me\" something on Slack (DM me, ping me, remind me, let me know; also in Automations and their instructions), use slack_send_as_bot with target me; slack_send_message posts as the user and does not notify them, so use it only to post as the user.\nSkills available to this member (load one with get_skill by its name before doing that kind of task):\n- add-to-marketplace: Add an existing Cloud plugin or skill's plugin to a marketplace.\n- add-user-to-marketplace: Grant a member access to a marketplace.\n- blog-post-draft-427qr8n2: Draft a company blog post in the house style. Use when writing a blog post or announcement.\n- board-deck-outline-ytywazyr: Outline a board meeting deck. Use when preparing for a board meeting.\n- bug-triage-n0gxc37w: Triage a new bug report: severity, owner, and a reproducible summary. Use when someone pastes a bug report or asks to triage an issue.\n- build-an-app: Build or change an App (an artifact), such as a dashboard, tracker, lookup, form, or calculator, that opens beside the chat.\n- candidate-debrief-s80v4qz9: Summarize interview feedback into a hire or no-hire recommendation. Use after an interview loop.\n- code-review-checklist-mzda6wrz: Review a pull request for correctness, tests, security, and readability. Use when asked to review code.\n- competitor-brief-vekz21r9: Summarize a competitor's product, pricing, and positioning. Use when someone asks about a competitor.\n- contract-summary-6f48r2yp: Summarize a contract's key terms, renewal dates, and risks. Use when reviewing a contract.\n- create-skill: Create a new OpenWork Cloud skill that its creator can use immediately.\n- customer-call-notes-vpvrnrz2: Turn raw customer call notes into a structured summary with pains, requests, and follow-ups. Use after any customer or sales call.\n- data-request-6n73hfht: Answer an internal data request with the right query and caveats. Use when someone asks for a metric or number.\n- design-review-mrnamtw2: Run a structured design review covering usability, accessibility, and consistency. Use when reviewing a mockup or UI.\n- drive-files: Pull Google Drive, OneDrive and SharePoint files into a local copy, edit them with shell tools, and save them back without loading them into context.\n- expense-report-kjf4f1gw: Prepare an expense report from receipts. Use when someone submits expenses.\n- first-openwork-skill-y4yv8g50: Starter skill created by OpenWork agent bootstrap.\n- hiring-scorecard-qzeg33gc: Write an interview scorecard for a role with competencies and rating anchors. Use when opening a role or preparing interviews.\n- \u2026and 21 more; call list_skills to see them all.",
+ "skills": [
+  {
+   "name": "add-to-marketplace",
+   "title": "Add To Marketplace",
+   "description": "Add an existing Cloud plugin or skill's plugin to a marketplace.",
+   "capability": "skill:add-to-marketplace",
+   "location": "skill://add-to-marketplace/SKILL.md"
+  },
+  {
+   "name": "add-user-to-marketplace",
+   "title": "Add User To Marketplace",
+   "description": "Grant a member access to a marketplace.",
+   "capability": "skill:add-user-to-marketplace",
+   "location": "skill://add-user-to-marketplace/SKILL.md"
+  },
+  {
+   "name": "blog-post-draft-427qr8n2",
+   "title": "blog-post-draft",
+   "description": "Draft a company blog post in the house style. Use when writing a blog post or announcement.",
+   "capability": "plugin:plg_01m6q5c958es58yczphjy0427q:cob_01m6q5c96ce16a3eckzn0qr8n2",
+   "location": "skill://blog-post-draft-427qr8n2/SKILL.md",
+   "pluginName": "Blog Post Draft"
+  },
+  {
+   "name": "board-deck-outline-ytywazyr",
+   "title": "board-deck-outline",
+   "description": "Outline a board meeting deck. Use when preparing for a board meeting.",
+   "capability": "plugin:plg_01m6q5c8h5eypsrv641qbnytyw:cob_01m6q5c8j0e9db797e5hrjazyr",
+   "location": "skill://board-deck-outline-ytywazyr/SKILL.md",
+   "pluginName": "Board Deck Outline"
+  },
+  {
+   "name": "bug-triage-n0gxc37w",
+   "title": "bug-triage",
+   "description": "Triage a new bug report: severity, owner, and a reproducible summary. Use when someone pastes a bug report or asks to triage an issue.",
+   "capability": "plugin:plg_01m6q5c2z4ekzamktzjhe2n0gx:cob_01m6q5c2zzewevf0qyxhdhc37w",
+   "location": "skill://bug-triage-n0gxc37w/SKILL.md",
+   "pluginName": "Bug Triage"
+  },
+  {
+   "name": "build-an-app",
+   "title": "Build an App",
+   "description": "Build or change an App (an artifact), such as a dashboard, tracker, lookup, form, or calculator, that opens beside the chat.",
+   "capability": "skill:build-an-app",
+   "location": "skill://build-an-app/SKILL.md"
+  },
+  {
+   "name": "candidate-debrief-s80v4qz9",
+   "title": "candidate-debrief",
+   "description": "Summarize interview feedback into a hire or no-hire recommendation. Use after an interview loop.",
+   "capability": "plugin:plg_01m6q5c5rte2gby824ghmxs80v:cob_01m6q5c5sjetxa5jerg71p4qz9",
+   "location": "skill://candidate-debrief-s80v4qz9/SKILL.md",
+   "pluginName": "Candidate Debrief"
+  },
+  {
+   "name": "code-review-checklist-mzda6wrz",
+   "title": "code-review-checklist",
+   "description": "Review a pull request for correctness, tests, security, and readability. Use when asked to review code.",
+   "capability": "plugin:plg_01m6q5c7keegtsqsg2j714mzda:cob_01m6q5c7m8eh2vj2rv15f16wrz",
+   "location": "skill://code-review-checklist-mzda6wrz/SKILL.md",
+   "pluginName": "Code Review Checklist"
+  },
+  {
+   "name": "competitor-brief-vekz21r9",
+   "title": "competitor-brief",
+   "description": "Summarize a competitor's product, pricing, and positioning. Use when someone asks about a competitor.",
+   "capability": "plugin:plg_01m6q5c8vaeft9w79kstz9vekz:cob_01m6q5c8wae8rahmqp5ax921r9",
+   "location": "skill://competitor-brief-vekz21r9/SKILL.md",
+   "pluginName": "Competitor Brief"
+  },
+  {
+   "name": "contract-summary-6f48r2yp",
+   "title": "contract-summary",
+   "description": "Summarize a contract's key terms, renewal dates, and risks. Use when reviewing a contract.",
+   "capability": "plugin:plg_01m6q5cbgwebqsf3w1ejja6f48:cob_01m6q5cbhme5wsc6hzm98ar2yp",
+   "location": "skill://contract-summary-6f48r2yp/SKILL.md",
+   "pluginName": "Contract Summary"
+  },
+  {
+   "name": "create-skill",
+   "title": "Create Skill",
+   "description": "Create a new OpenWork Cloud skill that its creator can use immediately.",
+   "capability": "skill:create-skill",
+   "location": "skill://create-skill/SKILL.md"
+  },
+  {
+   "name": "customer-call-notes-vpvrnrz2",
+   "title": "customer-call-notes",
+   "description": "Turn raw customer call notes into a structured summary with pains, requests, and follow-ups. Use after any customer or sales call.",
+   "capability": "plugin:plg_01m6q5c38te279pf5jj1jxvpvr:cob_01m6q5c39ke8qbtaqbaaeznrz2",
+   "location": "skill://customer-call-notes-vpvrnrz2/SKILL.md",
+   "pluginName": "Customer Call Notes"
+  },
+  {
+   "name": "data-request-6n73hfht",
+   "title": "data-request",
+   "description": "Answer an internal data request with the right query and caveats. Use when someone asks for a metric or number.",
+   "capability": "plugin:plg_01m6q5cb58eg5t8ej3er7z6n73:cob_01m6q5cb68esd8fx3zf08thfht",
+   "location": "skill://data-request-6n73hfht/SKILL.md",
+   "pluginName": "Data Request"
+  },
+  {
+   "name": "design-review-mrnamtw2",
+   "title": "design-review",
+   "description": "Run a structured design review covering usability, accessibility, and consistency. Use when reviewing a mockup or UI.",
+   "capability": "plugin:plg_01m6q5c7aae77bj0a0s7fgmrna:cob_01m6q5c7b3ecfa1ktsb3wxmtw2",
+   "location": "skill://design-review-mrnamtw2/SKILL.md",
+   "pluginName": "Design Review"
+  },
+  {
+   "name": "drive-files",
+   "title": "Drive Files",
+   "description": "Pull Google Drive, OneDrive and SharePoint files into a local copy, edit them with shell tools, and save them back without loading them into context.",
+   "capability": "skill:drive-files",
+   "location": "skill://drive-files/SKILL.md"
+  },
+  {
+   "name": "expense-report-kjf4f1gw",
+   "title": "expense-report",
+   "description": "Prepare an expense report from receipts. Use when someone submits expenses.",
+   "capability": "plugin:plg_01m6q5c9veerg9t17dm0jykjf4:cob_01m6q5c9w7e4nvvfd4qz9yf1gw",
+   "location": "skill://expense-report-kjf4f1gw/SKILL.md",
+   "pluginName": "Expense Report"
+  },
+  {
+   "name": "first-openwork-skill-y4yv8g50",
+   "title": "First OpenWork Skill",
+   "description": "Starter skill created by OpenWork agent bootstrap.",
+   "capability": "plugin:plg_01m6q56mjhekftawynavn7y4yv:cob_01m6q56mjhekftawyrap1w8g50",
+   "location": "skill://first-openwork-skill-y4yv8g50/SKILL.md",
+   "marketplaceName": "OpenWork Marketplace",
+   "pluginName": "First OpenWork Skill"
+  },
+  {
+   "name": "hiring-scorecard-qzeg33gc",
+   "title": "hiring-scorecard",
+   "description": "Write an interview scorecard for a role with competencies and rating anchors. Use when opening a role or preparing interviews.",
+   "capability": "plugin:plg_01m6q5c5cfe6dbc8ete945qzeg:cob_01m6q5c5feef3ae0vgcrze33gc",
+   "location": "skill://hiring-scorecard-qzeg33gc/SKILL.md",
+   "pluginName": "Hiring Scorecard"
+  },
+  {
+   "name": "incident-postmortem-edk1vdgd",
+   "title": "incident-postmortem",
+   "description": "Write a blameless incident postmortem with timeline, impact, root cause, and action items. Use after an outage or incident.",
+   "capability": "plugin:plg_01m6q5c3j9ewebvm32ngbnedk1:cob_01m6q5c3k4e3prkkwhwzjnvdgd",
+   "location": "skill://incident-postmortem-edk1vdgd/SKILL.md",
+   "pluginName": "Incident Postmortem"
+  },
+  {
+   "name": "investor-update-0ns0rwgp",
+   "title": "investor-update",
+   "description": "Write the monthly investor update with metrics, wins, asks. Use at the end of each month for investors.",
+   "capability": "plugin:plg_01m6q5c86ce7csw8chase00ns0:cob_01m6q5c87he3q97gm0qvvxrwgp",
+   "location": "skill://investor-update-0ns0rwgp/SKILL.md",
+   "pluginName": "Investor Update"
+  },
+  {
+   "name": "meeting-agenda-6jgvgqdt",
+   "title": "meeting-agenda",
+   "description": "Draft a meeting agenda with goals, topics, owners, and timeboxes. Use before any recurring or ad hoc meeting.",
+   "capability": "plugin:plg_01m6q5c4hte6x9q4c09seb6jgv:cob_01m6q5c4jje56am4egv91ygqdt",
+   "location": "skill://meeting-agenda-6jgvgqdt/SKILL.md",
+   "pluginName": "Meeting Agenda"
+  },
+  {
+   "name": "okr-draft-w2gfgb1j",
+   "title": "okr-draft",
+   "description": "Draft quarterly OKRs with measurable key results. Use when planning a quarter or reviewing goals.",
+   "capability": "plugin:plg_01m6q5c4wje3rts829dntsw2gf:cob_01m6q5c4xkeapthh1bkebxgb1j",
+   "location": "skill://okr-draft-w2gfgb1j/SKILL.md",
+   "pluginName": "Okr Draft"
+  },
+  {
+   "name": "onboarding-checklist-dgw3zfz9",
+   "title": "onboarding-checklist",
+   "description": "Build a first-week onboarding checklist for a new hire by role. Use when someone new joins the team.",
+   "capability": "plugin:plg_01m6q5c47xe298rcx50d9ddgw3:cob_01m6q5c48qexhvekaqf8e4zfz9",
+   "location": "skill://onboarding-checklist-dgw3zfz9/SKILL.md",
+   "pluginName": "Onboarding Checklist"
+  },
+  {
+   "name": "pricing-faq-5707yysv",
+   "title": "pricing-faq",
+   "description": "Answer pricing questions with the approved plan details and limits. Use when a customer asks about pricing or plans.",
+   "capability": "plugin:plg_01m6q5c6c8e8rbxdhe8x2w5707:cob_01m6q5c6d5ez7az1x0cdbzyysv",
+   "location": "skill://pricing-faq-5707yysv/SKILL.md",
+   "pluginName": "Pricing Faq"
+  },
+  {
+   "name": "product-spec-6kcpkswc",
+   "title": "product-spec",
+   "description": "Write a one-page product spec with problem, users, scope, and success metrics. Use when proposing a new feature.",
+   "capability": "plugin:plg_01m6q5c70jeg79a82562m36kcp:cob_01m6q5c71cewcte1mqe1chkswc",
+   "location": "skill://product-spec-6kcpkswc/SKILL.md",
+   "pluginName": "Product Spec"
+  },
+  {
+   "name": "release-notes-761tnqaa",
+   "title": "release-notes",
+   "description": "Write user-facing release notes from merged changes. Use when preparing a release or changelog entry.",
+   "capability": "plugin:plg_01m6q5c3wgep7vwraqywfz761t:cob_01m6q5c3xbeher4xtavc2snqaa",
+   "location": "skill://release-notes-761tnqaa/SKILL.md",
+   "pluginName": "Release Notes"
+  },
+  {
+   "name": "retro-facilitation-d0ewg44q",
+   "title": "retro-facilitation",
+   "description": "Run a sprint retrospective: what went well, what didn't, actions. Use at the end of a sprint.",
+   "capability": "plugin:plg_01m6q5cafrex4ttb8j9jm7d0ew:cob_01m6q5cageeazbkgkfc0n0g44q",
+   "location": "skill://retro-facilitation-d0ewg44q/SKILL.md",
+   "pluginName": "Retro Facilitation"
+  },
+  {
+   "name": "sales-followup-email-j52840g4",
+   "title": "sales-followup-email",
+   "description": "Draft a follow-up email after a sales call with next steps. Use after a prospect call.",
+   "capability": "plugin:plg_01m6q5c62hejra9jpv5z9zj528:cob_01m6q5c63ge4damgm8f3wg40g4",
+   "location": "skill://sales-followup-email-j52840g4/SKILL.md",
+   "pluginName": "Sales Followup Email"
+  },
+  {
+   "name": "security-questionnaire-qzfmnewd",
+   "title": "security-questionnaire",
+   "description": "Fill in a customer security questionnaire from approved answers. Use when a customer sends a security review.",
+   "capability": "plugin:plg_01m6q5c7w7efyabpxece81qzfm:cob_01m6q5c7x4emctbjbb2n87newd",
+   "location": "skill://security-questionnaire-qzfmnewd/SKILL.md",
+   "pluginName": "Security Questionnaire"
+  },
+  {
+   "name": "share-plugin",
+   "title": "Share Plugin",
+   "description": "Share an OpenWork Cloud skill's plugin with a person, team, or organization.",
+   "capability": "skill:share-plugin",
+   "location": "skill://share-plugin/SKILL.md"
+  },
+  {
+   "name": "slack-assistant",
+   "title": "Slack assistant",
+   "description": "Respond to Slack requests as the invoking member, with audience and thread isolation.",
+   "capability": "skill:slack-assistant",
+   "location": "skill://slack-assistant/SKILL.md"
+  },
+  {
+   "name": "social-post-3yse3e9c",
+   "title": "social-post",
+   "description": "Write a short social post announcing a launch. Use when announcing something on X or LinkedIn.",
+   "capability": "plugin:plg_01m6q5c9gyeznazy6m0xme3yse:cob_01m6q5c9hzecyvaj6dnc413e9c",
+   "location": "skill://social-post-3yse3e9c/SKILL.md",
+   "pluginName": "Social Post"
+  },
+  {
+   "name": "sprint-planning-rtjxtcx2",
+   "title": "sprint-planning",
+   "description": "Plan a sprint from the backlog with capacity and goals. Use at the start of a sprint.",
+   "capability": "plugin:plg_01m6q5catmen6sg02ma19jrtjx:cob_01m6q5cavye6cs805pak46tcx2",
+   "location": "skill://sprint-planning-rtjxtcx2/SKILL.md",
+   "pluginName": "Sprint Planning"
+  },
+  {
+   "name": "support-macro-kt3gqnzt",
+   "title": "support-macro",
+   "description": "Write a support reply in the team's tone with troubleshooting steps. Use when answering a customer support ticket.",
+   "capability": "plugin:plg_01m6q5c6nzekhas461zwhrkt3g:cob_01m6q5c6psexyv6wctxe90qnzt",
+   "location": "skill://support-macro-kt3gqnzt/SKILL.md",
+   "pluginName": "Support Macro"
+  },
+  {
+   "name": "translation-review-3455mzak",
+   "title": "translation-review",
+   "description": "Review a translation for accuracy and tone. Use when localizing product copy.",
+   "capability": "plugin:plg_01m6q5cbsze4pvjph3zh7w3455:cob_01m6q5cbttepvvbfbnbxt5mzak",
+   "location": "skill://translation-review-3455mzak/SKILL.md",
+   "pluginName": "Translation Review"
+  },
+  {
+   "name": "travel-plan-725p5p81",
+   "title": "travel-plan",
+   "description": "Plan a team offsite or business trip itinerary. Use when someone is organizing travel.",
+   "capability": "plugin:plg_01m6q5cce6ep6bef5nmz07725p:cob_01m6q5ccf3evnrxe5m3ee45p81",
+   "location": "skill://travel-plan-725p5p81/SKILL.md",
+   "pluginName": "Travel Plan"
+  },
+  {
+   "name": "user-interview-guide-p2tqwa4v",
+   "title": "user-interview-guide",
+   "description": "Write a user interview guide with open questions. Use before user research sessions.",
+   "capability": "plugin:plg_01m6q5cc3se9tvh6r0exbep2tq:cob_01m6q5cc4peqqsgyad0za5wa4v",
+   "location": "skill://user-interview-guide-p2tqwa4v/SKILL.md",
+   "pluginName": "User Interview Guide"
+  },
+  {
+   "name": "vendor-evaluation-5bvc92nr",
+   "title": "vendor-evaluation",
+   "description": "Compare vendors on cost, features, and risk. Use when choosing a tool or vendor.",
+   "capability": "plugin:plg_01m6q5ca5aegp9ev8t248s5bvc:cob_01m6q5ca6hesgv1aav296z92nr",
+   "location": "skill://vendor-evaluation-5bvc92nr/SKILL.md",
+   "pluginName": "Vendor Evaluation"
+  },
+  {
+   "name": "weekly-update-pdjeg0ns",
+   "title": "weekly-update",
+   "description": "Write the team's weekly status update. Use whenever someone asks for a weekly update, status update, or end-of-week summary for the team.",
+   "capability": "plugin:plg_01m6q59e95e5p9dbcypavypdje:cob_01m6q59e9xerjv9ec1za18g0ns",
+   "location": "skill://weekly-update-pdjeg0ns/SKILL.md",
+   "pluginName": "Team rituals"
+  }
+ ]
+}
